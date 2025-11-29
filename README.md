@@ -1,10 +1,10 @@
 # Atividade Avaliativa P2
 
 #### Integrantes:
-  * Alecsandro Costa Santos - 1986042
-  * Miguel da Silva Leite Felipe - 1999127  
-  * Vinícius Alves de Santana - 2002488
-  * Thiago Gabriel Silva Braga da Cruz - 2002246
+  * Alecsandro Costa Santos - 1986042 - 4° BCC-C
+  * Miguel da Silva Leite Felipe - 1999127 - 4° BCC-C
+  * Vinícius Alves de Santana - 2002488 - 4° BCC-C
+  * Thiago Gabriel Silva Braga da Cruz - 2002246 - 4° BCC-C
 
 ### Descrição do Projeto:
 
