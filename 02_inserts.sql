@@ -1,7 +1,5 @@
--- Arquivo: 02_inserts.sql
--- Descrição: Massa de dados ajustada para o DDL do Workbench
-
 USE plataforma;
+
 
 -- 1. Tabela CATEGORIA
 
@@ -25,7 +23,7 @@ INSERT INTO local (id_local, nome, endereco, cidade, estado, capacidade_maxima) 
 (6, 'Galeria Moderna', 'Rua das Artes, 55', 'Curitiba', 'PR', 400);
 
 
--- 3. Tabela CLIENTE (Sem coluna documento)
+-- 3. Tabela CLIENTE
 
 INSERT INTO cliente (id_cliente, nome, email) VALUES
 (1, 'Ana Silva', 'ana.silva@email.com'),
@@ -62,7 +60,7 @@ INSERT INTO cliente (id_cliente, nome, email) VALUES
 (32, 'Gustavo Lima', 'gustavo.lima@email.com');
 
 
--- 4. Tabela ARTISTA (Coluna nome_artista)
+-- 4. Tabela ARTISTA
 
 INSERT INTO artista (id_artista, nome_artista) VALUES
 (1, 'Banda Supernova'),
@@ -143,9 +141,9 @@ INSERT INTO sessao (id_sessao, id_evento, data_hora, status, lote) VALUES
 (23, 9, '2026-01-21 20:00:00', 'aberta', 'Lote 1'),
 (24, 11, '2025-12-03 14:00:00', 'aberta', 'Lote 1'),
 (25, 12, '2025-12-09 17:00:00', 'aberta', 'Lote 1'),
-(26, 1, '2024-10-10 20:00:00', 'aberta', 'Lote 1'), -- Sessão passada
-(27, 3, '2024-10-15 19:00:00', 'aberta', 'Lote 1'), -- Sessão passada
-(28, 5, '2024-10-20 09:00:00', 'aberta', 'Lote Único'), -- Sessão passada
+(26, 1, '2024-10-10 20:00:00', 'aberta', 'Lote 1'),
+(27, 3, '2024-10-15 19:00:00', 'aberta', 'Lote 1'),
+(28, 5, '2024-10-20 09:00:00', 'aberta', 'Lote Único'),
 (29, 2, '2025-11-14 23:00:00', 'aberta', 'Lote 1'),
 (30, 4, '2025-11-22 21:00:00', 'aberta', 'Lote 1'),
 (31, 13, '2025-12-15 10:00:00', 'aberta', 'Lote 1');
@@ -160,13 +158,13 @@ INSERT INTO tipo_ingresso (id_tipo_ingresso, nome, preco_base) VALUES
 (4, 'Camarote', 400.00);
 
 
--- 9. Tabela SESSAO_TIPO_INGRESSO (Adicionado id_sessao_tipo manual)
+-- 9. Tabela SESSAO_TIPO_INGRESSO
 
 INSERT INTO sessao_tipo_ingresso (id_sessao_tipo, id_sessao, id_tipo_ingresso, preco, quantidade_ofertada, quantidade_vendida) VALUES
 (1, 1, 1, 100.00, 200, 50), (2, 1, 2, 50.00, 200, 50), (3, 1, 3, 250.00, 50, 10),
 (4, 2, 1, 120.00, 200, 10), (5, 2, 2, 60.00, 200, 5),
 (6, 3, 1, 80.00, 300, 100), (7, 3, 3, 200.00, 50, 20),
-(8, 4, 1, 150.00, 100, 100), -- Esgotada
+(8, 4, 1, 150.00, 100, 100), 
 (9, 5, 1, 150.00, 100, 20),
 (10, 6, 1, 60.00, 150, 30), (11, 6, 2, 30.00, 150, 40),
 (12, 7, 1, 500.00, 50, 25),
@@ -180,7 +178,7 @@ INSERT INTO sessao_tipo_ingresso (id_sessao_tipo, id_sessao, id_tipo_ingresso, p
 (21, 15, 1, 100.00, 200, 10),
 (22, 16, 1, 80.00, 200, 5),
 (23, 17, 1, 150.00, 100, 10),
-(24, 18, 1, 60.00, 10, 10), -- Esgotada
+(24, 18, 1, 60.00, 10, 10), 
 (25, 19, 1, 500.00, 50, 2),
 (26, 20, 1, 200.00, 100, 1),
 (27, 21, 1, 180.00, 80, 0),
@@ -296,7 +294,7 @@ INSERT INTO pagamento (id_pagamento, id_pedido, valor, data_pagamento, status, f
 (26, 30, 80.00, '2025-10-30 17:05:00', 'aprovado', 'PIX');
 
 
--- 13. Tabela CHECK_IN (Colunas id_chekin e horario_chekin)
+-- 13. Tabela CHECK_IN
 
 INSERT INTO check_in (id_chekin, id_cliente, id_sessao, horario_chekin, valido) VALUES
 (1, 6, 26, '2024-10-10 19:30:00', 1),
@@ -305,3 +303,4 @@ INSERT INTO check_in (id_chekin, id_cliente, id_sessao, horario_chekin, valido) 
 (4, 1, 26, '2024-10-10 19:35:00', 1),
 (5, 2, 26, '2024-10-10 19:40:00', 1),
 (6, 17, 26, '2024-10-10 19:45:00', 1);
+
